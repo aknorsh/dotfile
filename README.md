@@ -1,13 +1,20 @@
 # dotfile
 ```sh
-# clone into home
-git clone https://github.com/aknorsh/dotfile.git ~/.dotfile
+git clone --recursive https://github.com/aknorsh/dotfile.git ~/.dotfile
 ```
 
-### Note
+## Dependencies
+```sh
+brew install stow
+```
 
-##### zsh
-- gitプロンプトを使う場合は [gitプロンプトの初期設定](https://github.com/woefe/git-prompt.zsh#manual-installation) をやる
+## How to apply
+```sh
+# nvim の例
+stow -v -t ~ nvim zsh
+```
+
+### Notes
 
 ##### vim
 ```sh
