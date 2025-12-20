@@ -5,7 +5,7 @@ git clone --recursive https://github.com/aknorsh/dotfile.git ~/.dotfile
 
 ## Dependencies
 ```sh
-brew install stow
+brew install stow neovim
 ```
 
 ## How to apply
