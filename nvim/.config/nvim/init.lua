@@ -3,6 +3,7 @@ vim.opt.relativenumber = true -- 相対行番号を表示（エンジニアに�
 vim.opt.expandtab = true      -- タブをスペースに変換
 vim.opt.smartindent = true    -- スマートインデント
 vim.opt.cursorline = true     -- カーソル行をハイライト
+vim.opt.mouse = 'a'
 
 -- following settings are disabled on vscode
 if not vim.g.vscode then

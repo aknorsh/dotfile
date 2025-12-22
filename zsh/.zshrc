@@ -32,3 +32,5 @@ export LANG=en_US.UTF-8
 
 # Antigravity
 export PATH="~/.antigravity/antigravity/bin:$PATH"
+
+source ~/.zshrc.local
