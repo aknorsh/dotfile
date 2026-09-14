@@ -1,0 +1,2 @@
+# 最初に本来の .zshprofile を読む
+[[ -r ~/.zprofile ]] && source ~/.zprofile

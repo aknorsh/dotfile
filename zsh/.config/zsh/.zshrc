@@ -1,13 +1,25 @@
+# 最初に本来の .zshrc を読む
+[[ -r ~/.zshrc ]] && source ~/.zshrc
+
 alias python=/usr/bin/python3
 autoload -Uz compinit && compinit
 autoload -U +X bashcompinit && bashcompinit
 
+# asdf
+[ -f "$HOME/.asdf/asdf.sh" ] && . "$HOME/.asdf/asdf.sh"
+[ -f "$HOME/.asdf/completions/asdf.bash" ] && . "$HOME/.asdf/completions/asdf.bash"
+
+# mise
+command -v mise >/dev/null 2>&1 && eval "$(mise activate zsh)"
+
 # git-prompt 拡張 https://github.com/woefe/git-prompt.zsh
-source ~/.zsh/git-prompt.zsh/git-prompt.zsh
-source ~/.zsh/git-prompt.zsh/examples/rprompt.zsh
+source ~/.config/zsh/git-prompt.zsh/git-prompt.zsh
+source ~/.config/zsh/git-prompt.zsh/examples/rprompt.zsh
 
-eval "$(direnv hook zsh)"
+# direnv
+command -v direnv > /dev/null 2>&1 && eval "$(direnv hook zsh)"
 
+# fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 function ghq-fzf() {
@@ -24,13 +36,9 @@ zle -N ghq-fzf
 bindkey "^]" ghq-fzf
 export GHQ_ROOT=~/github.com
 
-export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
-
 alias lg=lazygit
 alias gc="git checkout"
 export LANG=en_US.UTF-8
 
 # Antigravity
 export PATH="~/.antigravity/antigravity/bin:$PATH"
-
-source ~/.zshrc.local
