@@ -10,8 +10,8 @@ brew install stow neovim
 
 ## How to apply
 ```sh
-# nvim の例
-stow -v -t ~ nvim zsh
+make check
+make install
 ```
 
 ### Notes
