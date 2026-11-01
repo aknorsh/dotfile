@@ -14,7 +14,7 @@ make check
 make install
 ```
 
-`make install` で `zsh` `tmux` `herdr` を stow でホームに展開する(`.stowrc` により `~` 直下へ個別ファイルをリンク)。
+`make install` で `zsh` `tmux` `herdr` `nvim` `vim` を stow でホームに展開する(`.stowrc` により `~` 直下へ個別ファイルをリンク)。
 既存の実ファイルがあると stow が失敗するので、先にリポジトリ側へ移すか退避しておく。
 
 ### Notes

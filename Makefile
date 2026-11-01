@@ -1,5 +1,5 @@
 ROOT := $(patsubst %/,%,$(dir $(abspath $(lastword $(MAKEFILE_LIST)))))
-COMMON := zsh tmux herdr
+COMMON := zsh tmux herdr nvim vim
 
 # コマンド名:brew パッケージ名
 REQUIRED_CMDS := stow:stow nvim:neovim

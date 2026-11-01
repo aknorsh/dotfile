@@ -3,12 +3,22 @@ vim.opt.relativenumber = true -- 相対行番号を表示（エンジニアに�
 vim.opt.expandtab = true      -- タブをスペースに変換
 vim.opt.smartindent = true    -- スマートインデント
 vim.opt.cursorline = true     -- カーソル行をハイライト
+vim.opt.ignorecase = true     -- 検索時に大文字小文字を無視
+vim.opt.smartcase = true      -- 大文字を含めて検索したら、大文字小文字を区別する
+vim.opt.incsearch = true      -- 入力中からマッチする場所を表示
+vim.opt.wrap = false          -- 長い行を折り返さない
 vim.opt.mouse = 'a'
 
 -- following settings are disabled on vscode
 if not vim.g.vscode then
   vim.opt.number = true         -- 行番号を表示
   vim.opt.shiftwidth = 2        -- インデント幅
+end
+
+-- VSCode でのみ有効な設定
+if vim.g.vscode then
+  -- <leader> + e でファイルツリー開閉
+  vim.keymap.set('n', '<leader>e', [[<Cmd>call VSCodeNotify('workbench.action.toggleSidebarVisibility')<CR>]])
 end
 
 -- ### key mappings
