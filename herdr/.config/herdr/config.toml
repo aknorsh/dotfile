@@ -1,0 +1,17 @@
+# 初回オンボーディングを再表示しない
+onboarding = false
+
+[keys]
+# --- 基本 ---
+# prefix キーを Ctrl+w にする
+prefix = "ctrl+w"
+# デタッチする
+detach = "prefix+d"
+
+# --- pane ---
+# pane を左右に分割する(右へ)
+split_vertical = "prefix+|"
+# pane を上下に分割する(下へ)
+split_horizontal = "prefix+minus"
+# pane を閉じる
+close_pane = "prefix+x"

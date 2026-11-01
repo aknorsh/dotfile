@@ -4,3 +4,4 @@ export DOTFILES="${${(%):-%N}:A:h:h}"
 # .zshrc root を ~/.config/zsh に移動
 export ZDOTDIR=$HOME/.config/zsh
 [[ -r ~/.config/dotfiles.env ]] && source ~/.config/dotfiles.env
+[[ -r ~/.cargo/env ]] && . ~/.cargo/env

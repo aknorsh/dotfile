@@ -1,11 +1,11 @@
 # dotfile
 ```sh
-git clone --recursive https://github.com/aknorsh/dotfile.git ~/.dotfile
+git clone --recursive https://github.com/aknorsh/dotfile.git ~/github.com/aknorsh/dotfile
 ```
 
 ## Dependencies
 ```sh
-brew install stow neovim
+brew install stow neovim tmux herdr
 ```
 
 ## How to apply
@@ -13,6 +13,9 @@ brew install stow neovim
 make check
 make install
 ```
+
+`make install` で `zsh` `tmux` `herdr` を stow でホームに展開する(`.stowrc` により `~` 直下へ個別ファイルをリンク)。
+既存の実ファイルがあると stow が失敗するので、先にリポジトリ側へ移すか退避しておく。
 
 ### Notes
 
