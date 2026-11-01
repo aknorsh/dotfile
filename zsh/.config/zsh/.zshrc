@@ -5,9 +5,13 @@ alias python=/usr/bin/python3
 autoload -Uz compinit && compinit
 autoload -U +X bashcompinit && bashcompinit
 
-# asdf
-[ -f "$HOME/.asdf/asdf.sh" ] && . "$HOME/.asdf/asdf.sh"
-[ -f "$HOME/.asdf/completions/asdf.bash" ] && . "$HOME/.asdf/completions/asdf.bash"
+# asdf (git 版 → なければ brew 版)
+if [ -f "$HOME/.asdf/asdf.sh" ]; then
+  . "$HOME/.asdf/asdf.sh"
+  [ -f "$HOME/.asdf/completions/asdf.bash" ] && . "$HOME/.asdf/completions/asdf.bash"
+elif command -v brew >/dev/null 2>&1 && [ -f "$(brew --prefix asdf 2>/dev/null)/libexec/asdf.sh" ]; then
+  . "$(brew --prefix asdf)/libexec/asdf.sh"
+fi
 
 # mise
 command -v mise >/dev/null 2>&1 && eval "$(mise activate zsh)"
@@ -41,4 +45,4 @@ alias gc="git checkout"
 export LANG=en_US.UTF-8
 
 # Antigravity
-export PATH="~/.antigravity/antigravity/bin:$PATH"
+export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
