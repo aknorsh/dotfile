@@ -15,3 +15,9 @@ split_vertical = "prefix+|"
 split_horizontal = "prefix+minus"
 # pane を閉じる
 close_pane = "prefix+x"
+
+[ui]
+status_indicators = "dots"
+
+[session]
+resume_agents_on_restore = true
